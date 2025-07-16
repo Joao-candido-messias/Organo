@@ -4,6 +4,7 @@ import Formulario from "./componentes/Formulario";
 import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 import { v4 as uuidv4 } from 'uuid';
+import Botao from "./componentes/Botao";
 
 function App() {
 
@@ -247,7 +248,13 @@ function App() {
     },
   ]
 
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+
   const [colaboradores, setColaboradores] = useState(inicial)
+
+  const toggleFormulario = () => {
+    setMostrarFormulario((visivel) => !visivel)
+  }
 
   function deletarColaborador(id){
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
@@ -276,7 +283,16 @@ function App() {
   return (
     <div>
       <Banner />
-      <Formulario cadastrarTime ={cadastrarTime} times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      {mostrarFormulario && (
+        <Formulario 
+          cadastrarTime={cadastrarTime} 
+          times={times.map(time => time.nome)} 
+          aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} 
+        />
+      )}
+      <Botao type='toggle' onClick={toggleFormulario}>
+        <img src="/imagens/btn-icone.png" alt="toggle"/>
+      </Botao>
       <section className="times">
         <h1>Minha organização</h1>
         {times.map((time, indice) => 
@@ -287,7 +303,7 @@ function App() {
             colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} 
             mudarCor={mudarCorDoTime}
             aoFavoritar={toggleFavorito}
-            />
+          />
         )}
       </section>
       <Rodape />

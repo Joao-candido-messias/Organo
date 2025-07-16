@@ -13,3 +13,14 @@
 .botao:hover {
     color: #95FFD4;
 }
+
+.botao-toggle{
+    background: #6278F7;
+    border: none;
+    margin-left: 90vw;
+    margin-top: 2em;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 0.1em;
+}

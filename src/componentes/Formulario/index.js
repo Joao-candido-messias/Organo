@@ -50,7 +50,9 @@ const Formulario = ({aoCadastrar, times,cadastrarTime}) => {
                     items={times} 
                     valor={time}
                     aoAlterado={valor => setTime(valor)}/>
-                <Botao texto='Criar card' />
+                <Botao type='submit'>
+                    Criar Card
+                </Botao>
             </form>
 
             <form className="formulario" onSubmit={(evento) =>{
@@ -71,7 +73,9 @@ const Formulario = ({aoCadastrar, times,cadastrarTime}) => {
                     placeholder='Digite a cor do Time.'
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}/>
-                <Botao texto='Criar um novo Time'/>
+                <Botao type='submit'>
+                    Criar Time
+                </Botao>
             </form>
         </section>
     )
