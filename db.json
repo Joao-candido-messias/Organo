@@ -1,0 +1,46 @@
+{
+  "times": [
+    {
+      "favorito": false,
+      "id": "1",
+      "nome": "Programação",
+      "cor": "#57C278"
+    },
+    {
+      "favorito": false,
+      "id": "2",
+      "nome": "Front-End",
+      "cor": "#82CFFA"
+    },
+    {
+      "favorito": false,
+      "id": "3",
+      "nome": "Data Science",
+      "cor": "#A6D157"
+    },
+    {
+      "favorito": false,
+      "id": "4",
+      "nome": "Devops",
+      "cor": "#E06B69"
+    },
+    {
+      "favorito": false,
+      "id": "5",
+      "nome": "UX e Design",
+      "cor": "#DB6EBF"
+    },
+    {
+      "favorito": false,
+      "id": "6",
+      "nome": "Mobile",
+      "cor": "#FFBA05"
+    },
+    {
+      "favorito": false,
+      "id": "7",
+      "nome": "Inovação e Gestão",
+      "cor": "#FF8A29"
+    }
+  ]
+}
