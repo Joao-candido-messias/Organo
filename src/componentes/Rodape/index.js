@@ -1,23 +1,25 @@
-
 import './rodape.css'
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 const Rodape = () => {
     return (<footer className="footer" style={{backgroundImage: 'url(/imagens/fundo.png)'}}>
        <section>
        <ul>
             <li>
-                <a href="facebook.com" target="_blank">
-                    <img src="/imagens/facebook.png" alt="" />
+                <a href="https://www.linkedin.com/in/joaocandidomessias" target="_blank">
+                    <FaLinkedin />
                 </a>
             </li>
             <li>
-                <a href="twitter.com" target="_blank">
-                    <img src="/imagens/twitter.png" alt="" />
+                <a href="https://github.com/Joao-candido-messias/organo" target="_blank">
+                    <FaGithub />
                 </a>
             </li>
             <li>
-                <a href="instagram.com" target="_blank">
-                    <img src="/imagens/instagram.png" alt="" />
+                <a href="https://www.instagram.com/messias_og?igsh=cHpodWU5eTBlMzI4" target="_blank">
+                    <FaInstagram />
                 </a>
             </li>
         </ul>
@@ -27,7 +29,7 @@ const Rodape = () => {
        </section>
        <section>
         <p>
-            Desenvolvido por Alura.
+            Desenvolvido por João Messias.
         </p>
        </section>
     </footer>)

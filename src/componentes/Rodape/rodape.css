@@ -16,3 +16,14 @@
 .footer ul li:last-child {
     margin-right: 0;
 }
+
+.footer ul li a {
+  color: white;
+  font-size: 2.5em;
+}
+
+.footer ul li a:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
