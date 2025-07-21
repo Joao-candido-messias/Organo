@@ -41,7 +41,7 @@ function App() {
  
   async function mudarCorDoTime(cor, id){
     await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/times/${id}`,{
-      method: 'PATCH',
+      method: 'PUT',
       headers:{
         'Content-Type': 'application/json'
       },
@@ -82,7 +82,7 @@ function App() {
   const novoFavorito = !colaborador.favorito
 
   await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores/${id}`, {
-    method: 'PATCH',
+    method: 'PUT',
     headers:{
       'Content-Type':'application/json'
     },
