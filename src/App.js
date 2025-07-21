@@ -40,7 +40,7 @@ function App() {
   }
  
   async function mudarCorDoTime(cor, id){
-    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/times${id}`,{
+    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/times/${id}`,{
       method: 'PATCH',
       headers:{
         'Content-Type': 'application/json'
@@ -78,23 +78,25 @@ function App() {
    }
 
   async function toggleFavorito(id){
-    const colaborador = colaboradores.find(c => c.id === id)
-    const novoFavorito = !colaborador.favorito
+  const colaborador = colaboradores.find(c => c.id === id)
+  const novoFavorito = !colaborador.favorito
 
-    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores${id}`, {
-      method: 'PATCH',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify({favorito: novoFavorito})
-    })
-     setColaboradores(colaboradores.map(colaborador => {
+  await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores/${id}`, {
+    method: 'PATCH',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify({favorito: novoFavorito})
+  })
+
+  setColaboradores(colaboradores.map(colaborador => {
     if(colaborador.id === id){
       return {...colaborador, favorito:novoFavorito}
     }
     return colaborador
-    }))
-  }
+  }))
+}
+
 
   return (
     <div>

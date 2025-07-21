@@ -8,17 +8,17 @@ const Rodape = () => {
        <section>
        <ul>
             <li>
-                <a href="https://www.linkedin.com/in/joaocandidomessias" target="_blank">
+                <a href="https://www.linkedin.com/in/joaocandidomessias" target="_blank" rel="noreferrer">
                     <FaLinkedin />
                 </a>
             </li>
             <li>
-                <a href="https://github.com/Joao-candido-messias/organo" target="_blank">
+                <a href="https://github.com/Joao-candido-messias/organo" target="_blank" rel="noreferrer">
                     <FaGithub />
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/messias_og?igsh=cHpodWU5eTBlMzI4" target="_blank">
+                <a href="https://www.instagram.com/messias_og?igsh=cHpodWU5eTBlMzI4" target="_blank" rel="noreferrer">
                     <FaInstagram />
                 </a>
             </li>
