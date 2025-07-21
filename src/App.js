@@ -6,13 +6,12 @@ import Time from "./componentes/Time";
 import Botao from "./componentes/Botao";
 
 function App() {
-
   const [times, setTimes] = useState([])
   const [colaboradores, setColaboradores] = useState([])
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
 
   useEffect(() =>{
-    fetch('http://localhost:8080/times')
+    fetch('https://687e400ec07d1a878c31e85d.mockapi.io/API/times')
     .then(resposta => resposta.json())
     .then(dados =>{
       setTimes(dados)
@@ -21,7 +20,7 @@ function App() {
 
   useEffect(()=>{
     if(times.length > 0){
-      fetch('http://localhost:8080/colaboradores')
+      fetch('https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores')
       .then(resposta => resposta.json())
       .then(dados =>{
         setColaboradores(dados)
@@ -34,14 +33,14 @@ function App() {
   }
 
   async function deletarColaborador(id){
-    await fetch(`http://localhost:8080/colaboradores/${id}`,{
+    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores/${id}`,{
       method: 'DELETE'
     })
     setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
  
   async function mudarCorDoTime(cor, id){
-    await fetch(`http://localhost:8080/times/${id}`,{
+    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/times${id}`,{
       method: 'PATCH',
       headers:{
         'Content-Type': 'application/json'
@@ -57,7 +56,7 @@ function App() {
   }
 
    async function cadastrarTime(novoTime){
-    await fetch('http://localhost:8080/times',{
+    await fetch('https://687e400ec07d1a878c31e85d.mockapi.io/API/times',{
       method: 'POST',
       headers: {
         'content-Type':'application/json'
@@ -68,7 +67,7 @@ function App() {
    }
 
    async function cadastrarColaborador(novoColaborador){
-    await fetch('http://localhost:8080/colaboradores',{
+    await fetch('https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores',{
       method: 'POST',
       headers: {
         'Content-Type':'application/json',
@@ -82,7 +81,7 @@ function App() {
     const colaborador = colaboradores.find(c => c.id === id)
     const novoFavorito = !colaborador.favorito
 
-    await fetch(`http://localhost:8080/colaboradores/${id}`, {
+    await fetch(`https://687e400ec07d1a878c31e85d.mockapi.io/API/colaboradores${id}`, {
       method: 'PATCH',
       headers:{
         'Content-Type':'application/json'
